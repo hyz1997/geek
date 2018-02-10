@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理界面</title>
+	<link rel="stylesheet" type="text/css" href="css/management.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/exhibition.js"></script> 
+</head>
+<body>
+	<div class="header">
+		<span class="headerGeek">Geek</span>
+		<span class='headerTitle'>后台管理</span>
+	</div>
+	<div class="content">
+		<div class="searchContent">
+			<div class="search">
+				<label>输入作品名</label>
+				<input type="text" id="studentNo">
+				<input  id="lookFor" type="button" value="查询" >
+				<input id="add" type="button" value="添加">
+			</div>		
+		</div>
+		<div class="mainContent">
+			<div class="sider">
+				<img class="siderImg" src="img/logo.jpg">
+				<ul class="tabMenu">
+					<li>工作室成员</li>
+					<li>毕业去向</li>
+					<li>作品展示</li>
+					<li>加入我们</li>
+					<li>学习家园</li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="mainInfo">
+					<table class="listMember" border="1" cellspacing="0" cellpadding="0" >
+						<tbody id="listMember">
+						</tbody>		
+					</table>
+					<div class="page">
+						
+						<ul class="paging"></ul> 
+						
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>	
+	<div class="addMember pos-tf" id="addMember" style="display:none">
+		<div class="m-f-atuo">
+			<span class="m-f-80" id="x">X</span>
+			<form method= "post" id="addform" enctype ="multipart/form-data">
+				<div class="form-group m-f-10">
+					<input type="file" name="itemImg" accept=".jpg,.png">
+				</div>
+                <div class="form-group m-f-10">
+                    <input type="file" name="minImg" accept=".jpg,.png">
+                </div>
+				<div class="form-group">
+					<label style="text-align: right;">作品名字</label>		
+					<input type="text" name="itemName" class="form-control" id="name" placeholder="请输入作品名字">					
+				</div>
+                <div class="form-group">
+                    <label style="text-align: right;">首页显示</label>
+                    <input type="radio" name="display" class="form-control"  value="是">是
+                    <input type="radio" name="display" class="form-control" value="否">否
+                </div>
+				<div class="form-group">
+					<label style="text-align: right;">作品链接地址</label>		
+					<input type="text" name="itemUrl" id="url" placeholder="请输入作品链接地址">
+				</div>
+				<input type="button" id="submit" value="提交"> 
+			</form>
+		</div>
+	</div>
+	<div class="changeMember pos-tf" id="changeMember" style="display:none">
+		<div class="m-f-atuo">
+			<span class="m-f-80" id="close">X</span>
+			<form method= "post" id="changeform" enctype ="multipart/form-data">
+				<div class="form-group m-f-10">
+					<input type="file" name="itemImg" accept=".jpg,.png">
+				</div>
+                <div class="form-group m-f-10">
+                    <input type="file" name="minImg" accept=".jpg,.png">
+                </div>
+				<div class="form-group">
+					<label style="text-align: right;">作品名字</label>		
+					<input type="text" name="itemName" class="form-control" id="name" placeholder="请输入作品名字">					
+				</div>
+                <div class="form-group">
+                    <label style="text-align: right;">首页显示</label>
+                    <input type="radio" name="display" class="form-control"  value="是">是
+                    <input type="radio" name="display" class="form-control" value="否">否
+                </div>
+				<div class="form-group">
+					<label style="text-align: right;">作品链接地址</label>		
+					<input type="text" name="itemUrl" id="url" placeholder="请输入作品链接地址">
+				</div>
+				<input type="button" id="edit" value="保存修改"> 
+			</form>
+		</div>
+	</div>
+	<div id="bg"></div>
+</body>
+</html>

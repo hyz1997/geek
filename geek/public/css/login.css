@@ -1,0 +1,48 @@
+body{
+	background: url(../img/login.jpg) no-repeat;
+	background-size: 100%;
+	color: white;
+}
+/*介绍*/
+.introduce{
+	margin-top:300px;
+	margin-left:50px;
+}
+.introduce p{
+	font-size: 50px;
+}
+
+.introduce span{
+	margin-left: 220px;
+	margin-top: -40px;
+	display: block;
+}
+/*登陆平台*/
+.main{
+	position: absolute;
+	top:200px;
+	padding-top: 30px;
+	right: 50px;
+	width: 250px;
+	height: 250px;
+	border: 1px solid white;
+	border-radius: 8px;
+	background-color: rgba(255,255,255,0.1);
+}
+.formLogin{
+	margin-top: 20px;
+	padding-left: 28px;
+}
+.formLogin input{
+	margin-top: 15px;
+	border-radius: 5px;
+}
+#landing{
+	margin-top: 20px;
+	margin-left: 28px;
+	width: 170px;
+	height: 35px;
+	background: #235E92;
+	border-radius:5px;
+}
+

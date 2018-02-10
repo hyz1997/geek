@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理界面</title>
+	<link rel="stylesheet" type="text/css" href="css/management.css">
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/study.js"></script> 
+</head>
+<body>
+	<div class="header">
+		<span class="headerGeek">Geek</span>
+		<span class='headerTitle'>后台管理</span>
+	</div>
+	<div class="content">
+		<div class="searchContent">
+			<div class="search">
+				<label>输入学号</label>
+				<input type="text" id="studentNo">
+				<input  id="lookFor" type="button" value="查询" >
+				<input id="add" type="button" value="添加">
+			</div>		
+		</div>
+		<div class="mainContent">
+			<div class="sider">
+				<img class="siderImg" src="img/logo.jpg">
+				<ul class="tabMenu">
+					<li>工作室成员</li>
+					<li>毕业去向</li>
+					<li>作品展示</li>
+					<li>加入我们</li>
+					<li>学习家园</li>
+				</ul>
+			</div>
+			<div class="main">
+				<div class="mainInfo">
+					<table class="listMember" border="1" cellspacing="0" cellpadding="0" >
+						<tbody id="listMember">
+						</tbody>		
+					</table>
+					<div class="page">
+						
+						<ul class="paging"></ul> 
+						
+					</div>
+				</div>
+			</div>		
+		</div>
+	</div>	
+	<div class="addMember pos-tf" id="addMember" style="display:none">
+		<div class="m-f-atuo">
+			<span class="m-f-80" id="x">X</span>
+			<form method= "post" id="addform" enctype ="multipart/form-data">
+				
+				<div class="form-group">
+					<label style="text-align: right;">分类</label>		
+					<input type="text" name="studyKind" class="form-control" id="memberId" placeholder="请输入类别">					
+				</div>
+				<div class="form-group">
+					<label style="text-align: right;">名称</label>		
+					<input type="text" name="studyName" id="name" placeholder="请输入名称">
+				</div>
+				<div class="form-group">
+					<label  style="text-align: right;">链接</label>		
+					<input type="text" name="studyUrl" class="form-control" id="memberKind" placeholder="请输入链接">					
+				</div>
+				<div class="form-group m-f-10">
+					<input type="file" name="studyImg" accept=".jpg,.png">
+				</div>
+				<div class="form-group">
+					<label style="text-align: right;">介绍</label>
+					<textarea type="text" name="studyIntr" class="form-control" id="memberDir" placeholder="请输入介绍"></textarea>					
+				</div>
+				<input type="button" id="submit" value="添加"> 
+			</form>
+		</div>
+	</div>
+	<div class="changeMember pos-tf" id="changeMember" style="display:none">
+		<div class="m-f-atuo">
+			<span class="m-f-80" id="close">X</span>
+			<form method= "post" id="changeform" enctype ="multipart/form-data">
+				<div class="form-group">
+					<label style="text-align: right;">分类</label>		
+					<input type="text" name="studyKind" class="form-control" id="memberId" placeholder="请输入类别">					
+				</div>
+				<div class="form-group">
+					<label style="text-align: right;">名称</label>		
+					<input type="text" name="studyName" id="name" placeholder="请输入名称">
+				</div>
+				<div class="form-group">
+					<label  style="text-align: right;">链接</label>		
+					<input type="text" name="studyUrl" class="form-control" id="memberKind" placeholder="请输入链接">					
+				</div>
+				<div class="form-group m-f-10">
+					<input type="file" name="studyImg" accept=".jpg,.png">
+				</div>
+				<div class="form-group">
+					<label style="text-align: right;">介绍</label>
+					<textarea type="text" name="studyDir" class="form-control" id="memberDir" placeholder="请输入介绍"></textarea>					
+				</div>
+				<input type="button" id="edit" value="保存修改"> 
+			</form>
+		</div>
+	</div>
+	<div id="bg"></div>
+
+</body>
+</html>
